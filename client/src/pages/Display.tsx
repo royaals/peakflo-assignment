@@ -21,7 +21,7 @@ export function Display() {
       const text = await file.text();
       const lines = text.split("\n").filter((line) => line.trim());
 
-      // Skip the header row
+      
       const dataLines = lines.slice(1);
 
       const journeys: Journey[] = [];

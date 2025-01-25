@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
 import type { FareCalculationResult, Journey, MetroLine } from '../types/metro';
 import { calculateFares } from '../utils/api';
@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button"
 export function Home() {
   const [results, setResults] = useState<FareCalculationResult[]>([]);
   const [error, setError] = useState<string | null>(null);
-  const navigate = useNavigate();
+ 
 
   const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
     setError(null);
@@ -28,7 +28,7 @@ export function Home() {
       const lines = text.split('\n').filter(line => line.trim());
       const dataLines = lines.slice(1);
 
-      const journeys: Journey[] = dataLines.map((line, index) => {
+      const journeys: Journey[] = dataLines.map((line) => {
         const [fromLine, toLine, dateTime] = line.split(',').map(str => str.trim());
         return {
           fromLine: fromLine as MetroLine,

@@ -43,13 +43,13 @@ export function isPeakHour(dateTime: string): boolean {
   const time = hours * 100 + minutes;
 
   if (day >= 1 && day <= 5) {
-    // Monday to Friday
+    
     return (time >= 800 && time <= 1000) || (time >= 1630 && time <= 1900);
   } else if (day === 6) {
-    // Saturday
+    
     return (time >= 1000 && time <= 1400) || (time >= 1800 && time <= 2300);
   } else {
-    // Sunday
+    
     return time >= 1800 && time <= 2300;
   }
 }
