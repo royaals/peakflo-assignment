@@ -1,1 +1,1 @@
-{"root":["./src/app.ts","./src/controllers/farecontoller.ts","./src/routes/fareroutes.ts","./src/types/metro.ts","./src/utils/farecalculator.ts"],"version":"5.7.3"}
+{"root":["./src/app.ts","./src/controllers/farecontoller.ts","./src/middleware/errorhandler.ts","./src/middleware/validatejourney.ts","./src/routes/fareroutes.ts","./src/types/metro.ts","./src/utils/farecalculator.ts"],"version":"5.7.3"}

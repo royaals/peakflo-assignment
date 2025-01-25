@@ -60,15 +60,15 @@ export function Home() {
             <h2 className="text-2xl font-semibold text-sky-800 mb-4">Metro Map</h2>
             <MetroMap />
           </Card>
-
+          <Link to="/display">
+          <Button className="mt-8 w-full">View Detailed Fare Display</Button>
+        </Link>
           <Card className="p-6 bg-white shadow-lg lg:col-span-2">
             <h2 className="text-2xl font-semibold text-sky-800 mb-4">Fare Rules</h2>
             <FareRules />
           </Card>
         </div>
-        <Link to="/display">
-          <Button className="mt-8 w-full">View Detailed Fare Display</Button>
-        </Link>
+       
       </div>
     </div>
   )
