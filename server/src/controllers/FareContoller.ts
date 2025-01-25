@@ -1,4 +1,4 @@
-// src/controllers/FareController.ts
+
 import { Request, Response, NextFunction } from 'express';
 import { calculateFare } from '../utils/FareCalculator';
 import { Journey, FareCalculationResult } from '../types/metro';
