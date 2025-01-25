@@ -1,11 +1,17 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { Display } from './pages/Display';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-500">Hello, World!</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/display" element={<Display />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;
